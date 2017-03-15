@@ -2,19 +2,33 @@ SKYDOG 2016: CATCH ME IF YOU CAN VULNHUB WALKTHROUGH
 
 Ctf için bize verilen bazı bilgiler ve flaglar şu şekilde:
 Verilen 8 flagın formatı flag{md5} şeklinde olacağıydı.
+
+
 Flag #1 Don’t go Home Frank! There’s a Hex on Your House.
+
 Flag #2 Obscurity or Security?
+
 Flag #3 Be Careful Agent, Frank Has Been Known to Intercept Traffic Our Traffic.
+
 Flag #4 A Good Agent is Hard to Find.
+
 Flag #5 The Devil is in the Details - Or is it Dialogue? Either Way, if it’s Simple, Guessable, or Personal it Goes Against Best Practices 
+
 Flag #6 Where in the World is Frank?
+
 Flag #7 Frank Was Caught on Camera Cashing Checks and Yelling - I’m The Fastest Man Alive!
+
 Flag #8 Franks Lost His Mind or Maybe it’s His Memory. He’s Locked Himself Inside the Building. Find the Code to Unlock the Door Before He Gets Himself Killed!
 
+
 Bu CTF için verilen 8 Flag için çözümler şöyle olacaktır;
+
 Bir bağlantı taraması yaparak işe başlarsak karşımıza çıkan aynı ağda çalıştırdığımız sanal makinemize bağlantımızı sağlamış bulunuyoruz.
+
 Flag #1 Don’t go Home Frank! There’s a Hex on Your House.
+
 Sanal makinemizde ise root olmamız isteniyor. 
+
 Ipler üzerinde olan web sayfalarını kontrol ettiğimizde ise CTF’in anasayfası karşımıza çıkacaktır.
 Sayfamız üzerinde kaynak kodlarını tarattığımızda ise index.html dosyası içerisinde
  
