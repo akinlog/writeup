@@ -1,58 +1,45 @@
 SKYDOG 2016: CATCH ME IF YOU CAN VULNHUB WALKTHROUGH
 
-Ctf için bize verilen bazı bilgiler ve flaglar şu şekilde:
-Verilen 8 flagın formatı flag{md5} şeklinde olacağıydı.
-
-
-Flag #1 Don’t go Home Frank! There’s a Hex on Your House.
-![aucc4](https://cloud.githubusercontent.com/assets/26259124/23982482/6782e874-0a16-11e7-982e-5be9c4e0ce47.PNG)
-
-
-Flag #2 Obscurity or Security?
-
-Flag #3 Be Careful Agent, Frank Has Been Known to Intercept Traffic Our Traffic.
-
-Flag #4 A Good Agent is Hard to Find.
-
-Flag #5 The Devil is in the Details - Or is it Dialogue? Either Way, if it’s Simple, Guessable, or Personal it Goes Against Best Practices 
-
-Flag #6 Where in the World is Frank?
-
-Flag #7 Frank Was Caught on Camera Cashing Checks and Yelling - I’m The Fastest Man Alive!
-
-Flag #8 Franks Lost His Mind or Maybe it’s His Memory. He’s Locked Himself Inside the Building. Find the Code to Unlock the Door Before He Gets Himself Killed!
-
-
 Bu CTF için verilen 8 Flag için çözümler şöyle olacaktır;
 
 Bir bağlantı taraması yaparak işe başlarsak karşımıza çıkan aynı ağda çalıştırdığımız sanal makinemize bağlantımızı sağlamış bulunuyoruz.
 
 Flag #1 Don’t go Home Frank! There’s a Hex on Your House.
 
-Sanal makinemizde ise root olmamız isteniyor. 
+Sanal makinemizde ise root olmamız isteniyor.
+![aucc1](https://cloud.githubusercontent.com/assets/26259124/23982564/d3d7ad02-0a16-11e7-91c2-fac06ccf24d3.PNG)
 
 Ipler üzerinde olan web sayfalarını kontrol ettiğimizde ise CTF’in anasayfası karşımıza çıkacaktır.
 Sayfamız üzerinde kaynak kodlarını tarattığımızda ise index.html dosyası içerisinde
+![aucc2](https://cloud.githubusercontent.com/assets/26259124/23982566/d3d8eb40-0a16-11e7-8167-f0a001f71e13.PNG)
  
 Sitede karşıma çıkan ilk sayfa home sayfası olduğu için aklıma CTF’in birinci flagı olan 
 “Don’t go Home Frank! There’s a Hex on Your House.”
  Bana bir ipucu verdi. Web sitesinin kaynak koduna bir göz attığımızda ise /oldIE/html5.js dosyası dikkatimi çekti 
+ ![aucc3](https://cloud.githubusercontent.com/assets/26259124/23982565/d3d90f12-0a16-11e7-9d87-b9510a86e92d.PNG)
 
 Link olarak tarattığımızda ise karşımıza hex bir şifreleme çıktı.
 
+![aucc4](https://cloud.githubusercontent.com/assets/26259124/23982568/d3dadf86-0a16-11e7-9d5d-1738ebcdc339.PNG)
+
+
  
 Komut satırımızda ise 
-echo 666c61677b37633031333230373061306566373164353432363633653964633166356465657d | -xxd –r –p kodumuzu yazdığımızda karşımıza ilk flagımız çıkıyor 
+
+echo 666c61677b37633031333230373061306566373164353432363633653964633166356465657d | -xxd –r –p kodumuzu yazdığımızda karşımıza ilk flagımız çıkıyor 
+![aucc5](https://cloud.githubusercontent.com/assets/26259124/23982555/d3a4bc9e-0a16-11e7-942c-179db0b141a7.PNG)
  
 Flagımızı encode ettiğimizde ise birçoğumuzun sevdiği tool olan “nmap” ortaya çıkıyor 
 
 FLAG 2
 
-1.Flagda karşımıza çıkan nmap ipucu ile birlikte bir ssh service scan yaptım. 
+1.Flagda karşımıza çıkan nmap ipucu ile birlikte bir ssh service scan yaptım.
+![aucc6](https://cloud.githubusercontent.com/assets/26259124/23982554/d3a3f520-0a16-11e7-804f-347f918be6ee.PNG)
 
 
 
-Ve 22222 portuyla bağlantı sağladığımızda ise karşımıza ikinci flagımız çıkıyor 
+Ve 22222 portuyla bağlantı sağladığımızda ise karşımıza ikinci flagımız çıkıyor 
+![aucc7](https://cloud.githubusercontent.com/assets/26259124/23982551/d3a14898-0a16-11e7-8a9f-98701e86c7e2.PNG)
  
 Flag{53c82eba31f6d416f331de9162ebe997} 
 
@@ -64,21 +51,22 @@ md5 kodunu decode ettiğimizde ise verilen ipucu “encrypted” olarak görül�
 FLAG 3
 
 Flagın adından ve “encrypted”  ipucundan ise site traffiğine bir göz atmak içi SSL sertifikalarına göz atıyoruz.
+![aucc 8](https://cloud.githubusercontent.com/assets/26259124/23982550/d3a12606-0a16-11e7-9edb-fd18e508043f.PNG)
  
 Ve karşımıza  flag3{f82366a9ddc064585d54e3f78bde3221} çıkıyor. Decode ettiğimizde ise “personnel” ipucu ile karşılaşıyoruz.
 
 
 
 FLAG 4
-
-Web sayfa referans yolu gibi görülen bir önceki “personnel” ipucumu denedim. Ve karşıma;
+![aucc 11 5](https://cloud.githubusercontent.com/assets/26259124/23982558/d3bc6b46-0a16-11e7-8a68-029287e54adf.png)
+Web sayfasında referans yolu gibi görülen bir önceki “personnel” ipucumu denedim. Ve karşıma;
 
 ACCESS DENIED!!! You Do Not Appear To Be Coming From An FBI Workstation. Preparing Interrogation Room 1. Car Batteries Charging....
 
 Gibi bir uyarı yazısı geldi. Erişim engeli olduğunu farkettim. Ufak çaplı yapmış olduğum google aramalarında ise User Agent Switcher 
 
 adlı eklentiyi Mozilla tarayıcı üzerine kurup değişiklikleri yaptım ve karşıma FBI portala benzetilen bir site açıldı ve flagda oradaydı 
-  
+  ![aucc10](https://cloud.githubusercontent.com/assets/26259124/23982552/d3a1831c-0a16-11e7-83a9-08f5ece56b5d.PNG)
 flag{14e10d570047667f904261e6d08f520f} 
 
 decode: evidence
