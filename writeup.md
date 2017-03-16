@@ -3,6 +3,7 @@ SKYDOG 2016: CATCH ME IF YOU CAN VULNHUB WALKTHROUGH
 Ctf için bize verilen bazı bilgiler ve flaglar şu şekilde:
 Verilen 8 flagın formatı flag{md5} şeklinde olacağıydı.
 
+#1
 
 Flag #1 Don’t go Home Frank! There’s a Hex on Your House.
 
