@@ -119,6 +119,7 @@ Flag isminden anlaşılmak üzere yine bir film konusu olarak replikler içinde 
 
 Flashın gerçek adı Barry Allen ve bir önceki flagdan kalan “iheartbrenda” ipucu belkide bir şifre olabilirler.
 Tarama işlemine devam etmek için SSH kullanıyoruz. Ve komut satırında şöyle bir tarama gerçekleştiriyoruz. 
+
 ![image](https://cloud.githubusercontent.com/assets/26259124/24017693/ace0c836-0a99-11e7-8631-6e0eea486c84.png)
 
 Burada ise bizden password istiyor. Password olarak dikkatmizi bir önceki flagdan ipucu olarak gelen “iheartbrenda” aklımızı karıştırıyor. Denendiğinde ise bağlantı gerçekleşiyor.
@@ -128,6 +129,7 @@ Burada ise bizden password istiyor. Password olarak dikkatmizi bir önceki flagd
 
 
 Ve bir flag daha gün yüzüne çıkıyor.
+ 
  ![image](https://cloud.githubusercontent.com/assets/26259124/24017709/bc5f75a0-0a99-11e7-97e8-aec238d3c90e.png)
 
 Flag encode “theflash” 
@@ -143,6 +145,7 @@ FLAG 8
 Son flagımızda ipuçlarımız”Frank aklını kaybetti ve kendini binaya kilitledi. Kendini öldürmeden kapının kodunu açın ve “theflash” 
 
 Barry’nin dizinlerine bakarken system-data.zip adlı bir dosya dikkat çekiyor. Bilgisayarıma kopyalayıp unzip ettiğimde ise boyutu 1 GB’ a kadar ulaşıyor. 
+
 ![image](https://cloud.githubusercontent.com/assets/26259124/24017722/cf5604f8-0a99-11e7-959a-e63f4bf02918.png)
 
 Dosyayı çalıştırdığımızda ise bellek dosyalarıyla karşılaşmaktayız.
