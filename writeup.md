@@ -1,8 +1,8 @@
 SKYDOG 2016: CATCH ME IF YOU CAN VULNHUB WALKTHROUGH
 
-Bu CTF için verilen 8 Flag için çözümler şöyle olacaktır;
 
-Bir bağlantı taraması yaparak işe başlarsak karşımıza çıkan aynı ağda çalıştırdığımız sanal makinemize bağlantımızı sağlamış bulunuyoruz.
+
+Sanal makinemizi ve Kali Linux makinemizi  Oracle VirtualBox ile ayaklandırdıktan sonra ilk iş olarak ağımdaki hedef sistemde bir port taraması yapıyoruz
 
 Flag #1 Don’t go Home Frank! There’s a Hex on Your House.
 
